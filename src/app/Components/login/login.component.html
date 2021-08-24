@@ -1,0 +1,22 @@
+<form [formGroup]="validateForm" (ngSubmit)="onSubmit()">
+    <div class="col-6 m-auto alert-dark mt-5 p-5">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email"
+      formControlName="email"
+       aria-describedby="emailHelp">
+       <span class="text-danger"
+       *ngIf="!validateEmail">Please Try With Other Email</span>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password"
+      formControlName="password">
+    </div>
+    <span class="text-danger"
+       *ngIf="!validatePassword">Please Try With Other Password</span>
+       <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+</div>
+  </form>
+

@@ -1,0 +1,12 @@
+<!-- <p *ngFor="let item of data">{{item.name}}</p> -->
+<div class="col-4 m-auto btn-lg"><button class="btn btn-danger" (click)="onAdd()">Add</button></div>
+<div  class="col-6 mb-4  mx-auto alert alert-secondary shadow text-center"
+*ngFor="let item of data"
+>
+    <p>Name : {{item.name}}</p>
+    <p>Phone : {{item.phone}}</p>
+    <p>Address : {{item.address}}</p>
+    <p>notes : {{item.notes}}</p>
+    <button class="btn btn-danger me-3" (click)="onEdit(item)">Edit</button>
+    <button class="btn btn-danger" (click)="onDelete(item)">Delete</button>
+</div>
